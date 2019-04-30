@@ -655,7 +655,7 @@ master: ai-wdtsaltdev1.niaid.nih.gov
 # Fingerprint of the master public key to validate the identity of your Salt master
 # before the initial key exchange. The master fingerprint can be found by running
 # "salt-key -f master.pub" on the Salt master.
-master_finger: 'ff:5b:6e:48:e6:a0:3e:ba:dd:b1:2e:29:4b:be:b9:94:82:b6:c1:d7:22:70:00:50:f8:3b:2d:b2:53:f0:52:77'
+master_finger: 'f5:1e:51:e5:fd:fd:db:fe:f4:92:d4:b8:9e:f6:4b:14:93:5e:d2:1f:57:8e:c1:14:80:10:fc:9d:c6:64:55:d0'
 
 # Use TLS/SSL encrypted connection between master and minion.
 # Can be set to a dictionary containing keyword arguments corresponding to Python's
