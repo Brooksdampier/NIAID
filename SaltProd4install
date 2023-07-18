@@ -1,0 +1,22 @@
+#!/bin/bash
+
+touch /etc/apt/apt.conf.d/97verify-peer.conf \
+&& echo >>/etc/apt/apt.conf.d/97verify-peer.conf "Acquire { https::Verify-Peer false }"
+
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E08A149DE57BFBE 
+
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 64CBBC8173D76B3F
+
+echo "deb  [trusted=yes] https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal main" | sudo tee /etc/apt/sources.list.d/salt.list
+
+apt update
+
+apt -y install salt-minion
+
+rm -f /etc/salt/minion
+
+cd /etc/salt
+
+wget https://raw.githubusercontent.com/Brooksdampier/NIAIDPROD/master/minion
+
+systemctl restart salt-minion
