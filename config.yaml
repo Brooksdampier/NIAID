@@ -1,0 +1,12 @@
+network:
+ version: 2
+ renderer: networkd
+ ethernets:
+  eno1:
+   auth:
+    key-management: 802.1x
+    method: peap
+    identity: NIX-AI-ISE-01
+    password: "046l>lY32LY8X`huj;d"
+    ca-certificate: /etc/ssl/certs/NIH-DPKI-ROOT-1A.pem.pem
+   dhcp4: true
